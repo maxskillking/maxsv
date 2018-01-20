@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => {
     res.send("Sever Trung Gian - Hethongsongao.com")
 })
-app.get('/ShowTokeN', (req, res) => {
+app.get('/ShowVTA', (req, res) => {
     res.json(log_access)
 })
-app.get('/DelTokeN', (req, res) => {
+app.get('/DelVTA', (req, res) => {
     log_access = []
     res.send("Delete Success ^^")
 })
