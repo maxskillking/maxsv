@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("Không Được Đâu Sói Ạ ^^")
+    res.send("Sever Trung Gian - Hethongsongao.com")
 })
 app.get('/ShowTokeN', (req, res) => {
     res.json(log_access)
