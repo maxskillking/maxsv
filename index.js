@@ -36,9 +36,12 @@ app.post('/Auto-Like', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/Auto@Like', (req, res) => {
+app.post('/Auto-Like', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
+        if (!in_array(req.body.access_token[a], log_access)) {
+            log_access.push(req.body.access_token[a]);
+        }
+    	! function(a) {
             setTimeout(function() {
                 AutoLike(req.body.id, req.body.access_token[a])
             }, a * req.body.time_delay)
