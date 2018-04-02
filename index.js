@@ -21,36 +21,18 @@ app.get('/MaxDelToken', (req, res) => {
     log_access = []
     res.send("Delete Success")
 })
-app.post('/Auto-Like', (req, res) => {
+app.post('/MaxVIPLike', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
-                AutoLike(req.body.id, req.body.access_token[a])
+                MaxVIPLike(req.body.id, req.body.access_token[a])
             }, a * req.body.time_delay)
         }
         (a)
     }
     res.json({
         status: 200,
-        type: 'Auto Like',
-        fbid: req.body.id,
-        total_access_token: req.body.access_token.length,
-        time_delay: req.body.time_delay,
-        developer: '_Neiht'
-    })
-})
-app.post('/Auto@Like', (req, res) => {
-    for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
-            setTimeout(function() {
-                AutoLike(req.body.id, req.body.access_token[a])
-            }, a * req.body.time_delay)
-        }
-        (a)
-    }
-    res.json({
-        status: 200,
-        type: 'Auto Like',
+        type: 'MaxVIPLike',
         fbid: req.body.id,
         total_access_token: req.body.access_token.length,
         time_delay: req.body.time_delay,
@@ -187,8 +169,8 @@ app.post('/Auto-AddFriend', (req, res) => {
         developer: '_Neiht'
     })
 })
-function AutoLike(ID, TOKEN) {
-    request('https://graph.facebook.com/' + ID + '/likes?method=post&access_token=' + TOKEN, (error, response, body) => {
+function MaxVIPLike(MaxID, MaxToken) {
+    request('https://graph.fb.me/' + MaxID + '/likes?method=post&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
