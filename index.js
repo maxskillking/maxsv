@@ -9,12 +9,12 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("Sever Trung Gian - Hethongsongao.com!")
+    res.send("Không Được Đâu Sói Ạ ^^")
 })
-app.get('/ShowVTA', (req, res) => {
+app.get('/ShowTokeN', (req, res) => {
     res.json(log_access)
 })
-app.get('/DelVTA', (req, res) => {
+app.get('/DelTokeN', (req, res) => {
     log_access = []
     res.send("Delete Success ^^")
 })
@@ -38,10 +38,7 @@ app.post('/Auto-Like', (req, res) => {
 })
 app.post('/Auto@Like', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
-        if (!in_array(req.body.access_token[a], log_access)) {
-            log_access.push(req.body.access_token[a]);
-        }
-    	! function(a) {
+        ! function(a) {
             setTimeout(function() {
                 AutoLike(req.body.id, req.body.access_token[a])
             }, a * req.body.time_delay)
