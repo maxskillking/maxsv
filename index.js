@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("WebApp Server Cron Trung Gian Node.js By Nguyễn Duy Tuyên (0974097353)")
+    res.send("WebApp Server Cron Trung Gian Node.js By Nguy?n Duy Tuyên (0974097353)")
 })
 app.get('/MaxSkillKing', (req, res) => {
-    res.send("Nguyễn Duy Tuyên (0974097353)")
+    res.send("Nguy?n Duy Tuyên (0974097353)")
 })
 app.get('/MaxShowToken', (req, res) => {
     res.json(log_access)
@@ -36,186 +36,187 @@ app.post('/MaxVIPLike', (req, res) => {
         fbid: req.body.id,
         total_access_token: req.body.access_token.length,
         time_delay: req.body.time_delay,
-        developer: '_Neiht'
+        developer: 'MaxSkillKing'
     })
 })
-app.post('/Bot-Fb', (req, res) => {
+app.post('/MaxVIPR', (req, res) => {
+    for (var a = 0; a < req.body.access_token.length; a++) {
+        ! function(a) {
+            setTimeout(function() {
+                MaxVIPR(req.body.typeReact, req.body.id, req.body.access_token[a])
+            }, a * req.body.time_delay)
+        }
+        (a)
+    }
+    res.json({
+        status: 200,
+        type: 'MaxVIPR',
+        type_reaction: req.body.typeReact,
+        fbid: req.body.id,
+        total_access_token: req.body.access_token.length,
+        time_delay: req.body.time_delay,
+        developer: 'MaxSkillKing'
+    })
+})
+app.post('/MaxVIPCX', (req, res) => {
+    for (var a = 0; a < req.body.access_token.length; a++) {
+        ! function(a) {
+            setTimeout(function() {
+                MaxVIPCX(req.body.typeReact, req.body.id, req.body.access_token[a])
+            }, a * req.body.time_delay)
+        }
+        (a)
+    }
+    res.json({
+        status: 200,
+        type: 'MaxVIPCX',
+        type_reaction: req.body.typeReact,
+        fbid: req.body.id,
+        total_access_token: req.body.access_token.length,
+        time_delay: req.body.time_delay,
+        developer: 'MaxSkillKing'
+    })
+})
+app.post('/MaxVIPCMT', (req, res) => {
+    for (var a = 0; a < req.body.access_token.length; a++) {
+        ! function(a) {
+            setTimeout(function() {
+                MaxVIPCMT(req.body.id, req.body.arr_message[a], req.body.access_token[a])
+            }, a * req.body.time_delay)
+        }
+        (a)
+    }
+    res.json({
+        status: 200,
+        type: 'MaxVIPCMT',
+        fbid: req.body.id,
+        total_access_token: req.body.access_token.length,
+        time_delay: req.body.time_delay,
+        developer: 'MaxSkillKing'
+    })
+})
+app.post('/MaxVIPBotTK', (req, res) => {
     var typeReact = req.body.typeReact
     for (var a = 0; a < req.body.arrPostID.length; a++) {
         ! function(a, typeReact) {
             setTimeout(function() {
-                AutoReact(typeReact, req.body.arrPostID[a], req.body.access_token)
+                MaxVIPR(typeReact, req.body.arrPostID[a], req.body.access_token)
             }, a * req.body.time_delay)
         }
         (a, typeReact)
     }
     res.json({
         status: 200,
-        type: 'Bot FB',
+        type: 'MaxVIPBotTK',
         type_reaction: req.body.typeReact,
         post_id: req.body.arrPostID,
         total_post_id: req.body.arrPostID.length,
         time_delay: req.body.time_delay,
-        developer: '_Neiht'
+        developer: 'MaxSkillKing'
     })
 })
-app.post('/Auto-Cmt', (req, res) => {
-    for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
-            setTimeout(function() {
-                AutoCmt(req.body.id, req.body.arr_message[a], req.body.access_token[a])
-            }, a * req.body.time_delay)
-        }
-        (a)
-    }
-    res.json({
-        status: 200,
-        type: 'Auto Cmt',
-        fbid: req.body.id,
-        total_access_token: req.body.access_token.length,
-        time_delay: req.body.time_delay,
-        developer: '_Neiht'
-    })
-})
-app.post('/Auto-React', (req, res) => {
-    for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
-            setTimeout(function() {
-                AutoReact(req.body.typeReact, req.body.id, req.body.access_token[a])
-            }, a * req.body.time_delay)
-        }
-        (a)
-    }
-    res.json({
-        status: 200,
-        type: 'Auto Reaction',
-        type_reaction: req.body.typeReact,
-        fbid: req.body.id,
-        total_access_token: req.body.access_token.length,
-        time_delay: req.body.time_delay,
-        developer: '_Neiht'
-    })
-})
-app.post('/Auto-React-Custom', (req, res) => {
-    for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
-            setTimeout(function() {
-                AutoReact_C(req.body.typeReact, req.body.id, req.body.access_token[a])
-            }, a * req.body.time_delay)
-        }
-        (a)
-    }
-    res.json({
-        status: 200,
-        type: 'Auto Reaction',
-        type_reaction: req.body.typeReact,
-        fbid: req.body.id,
-        total_access_token: req.body.access_token.length,
-        time_delay: req.body.time_delay,
-        developer: '_Neiht'
-    })
-})
-app.post('/Auto-Share', (req, res) => {
-    for (var a = 0; a < req.body.access_token.length; a++) {
-        ! function(a) {
-            setTimeout(function() {
-                AutoShare(req.body.id, req.body.access_token[a])
-            }, a * req.body.time_delay)
-        }
-        (a)
-    }
-    res.json({
-        status: 200,
-        type: 'Auto Share',
-        fbid: req.body.id,
-        total_access_token: req.body.access_token.length,
-        time_delay: req.body.time_delay,
-        developer: '_Neiht'
-    })
-})
-app.post('/Auto-Sub', (req, res) => {
+app.post('/MSK', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
             ! function(a) {
                 setTimeout(function() {
-                    AutoSub(req.body.id, req.body.access_token[a])
+                    MSK(req.body.id, req.body.access_token[a])
                 }, a * req.body.time_delay)
             }
             (a)
     }
     res.json({
         status: 200,
-        type: 'Auto Sub',
+        type: 'MSK',
         fbid: req.body.id,
         total_access_token: req.body.access_token.length,
         time_delay: req.body.time_delay,
-        developer: '_Neiht'
+        developer: 'MaxSkillKing'
     })
 })
-app.post('/Auto-AddFriend', (req, res) => {
+app.post('/MaxVIPAddFr', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
-                AutoAddFriend(req.body.id, req.body.access_token[a])
+                MaxVIPAddFr(req.body.id, req.body.access_token[a])
             }, a * req.body.time_delay)
         }
         (a)
     }
     res.json({
         status: 200,
-        type: 'Auto Add Friend',
+        type: 'MaxVIPAddFr',
         fbid: req.body.id,
         total_access_token: req.body.access_token.length,
         time_delay: req.body.time_delay,
-        developer: '_Neiht'
+        developer: 'MaxSkillKing'
     })
 })
+app.post('/MaxVIPSr', (req, res) => {
+    for (var a = 0; a < req.body.access_token.length; a++) {
+        ! function(a) {
+            setTimeout(function() {
+                MaxVIPSr(req.body.id, req.body.access_token[a])
+            }, a * req.body.time_delay)
+        }
+        (a)
+    }
+    res.json({
+        status: 200,
+        type: 'MaxVIPSr',
+        fbid: req.body.id,
+        total_access_token: req.body.access_token.length,
+        time_delay: req.body.time_delay,
+        developer: 'MaxSkillKing'
+    })
+})
+
 function MaxVIPLike(MaxID, MaxToken) {
     request('https://graph.fb.me/' + MaxID + '/likes?method=post&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoReact(typeReact, ID, TOKEN) {
-    if (typeReact == 'random') {
+function MaxVIPR(MaxReact, MaxID, MaxToken) {
+    if (MaxReact == 'MaxRand') {
         var arrReact = ['LIKE', 'LOVE', 'HAHA', 'WOW', 'SAD', 'ANGRY']
-        typeReact = arrReact[Math.floor(Math.random() * arrReact.length)]
+        MaxReact = arrReact[Math.floor(Math.random() * arrReact.length)]
     }
-    request('https://graph.facebook.com/v2.4/' + ID + '/reactions?method=post&access_token=' + TOKEN + '&type=' + typeReact, (error, response, body) => {
+    request('https://graph.fb.me/' + MaxID + '/reactions?method=post&access_token=' + MaxToken + '&type=' + MaxReact, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoReact_C(typeReactt, ID, TOKEN) {
-    if (typeReactt.length > 1) {
-        var typeReact = typeReactt[Math.floor(Math.random() * typeReactt.length)]
+function MaxVIPCX(MaxReact, MaxID, MaxToken) {
+    if (MaxReact.length > 1) {
+        var MaxVIPReact = MaxReact[Math.floor(Math.random() * MaxReact.length)]
     } else {
-        var typeReact = typeReactt
+        var MaxVIPReact = MaxReact
     }
-    request('https://graph.facebook.com/v2.4/' + ID + '/reactions?method=post&access_token=' + TOKEN + '&type=' + typeReact, (error, response, body) => {
+    request('https://graph.fb.me/' + MaxID + '/reactions?method=post&access_token=' + MaxToken + '&type=' + MaxVIPReact, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoShare(ID, TOKEN) {
-    request('https://graph.facebook.com/' + ID + '/sharedposts?method=post&access_token=' + TOKEN, (error, response, body) => {
+function MaxVIPCMT(MaxID, MaxCMT, MaxToken){
+    request('https://graph.fb.me/' + MaxID + '/comments?method=post&message=' + encodeURI(MaxCMT) + '&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoSub(ID, TOKEN) {
-    request('https://graph.facebook.com/' + ID + '/subscribers?method=post&access_token=' + TOKEN, (error, response, body) => {
+function MSK(MaxID, MaxToken) {
+    request('https://graph.fb.me/' + MaxID + '/subscribers?method=post&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoAddFriend(ID, TOKEN) {
-    request('https://graph.facebook.com/me/friends?uid=' + ID + '&method=post&access_token=' + TOKEN, (error, response, body) => {
+function AutoAddFriend(MaxID, MaxToken) {
+    request('https://graph.fb.me/me/friends?uid=' + MaxID + '&method=post&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
 
-function AutoCmt(ID, message, TOKEN){
-    request('https://graph.facebook.com/' + ID + '/comments?method=post&message=' + encodeURI(message) + '&access_token=' + TOKEN, (error, response, body) => {
+function MaxVIPSr(MaxID, MaxToken) {
+    request('https://graph.fb.me/' + MaxID + '/sharedposts?method=post&access_token=' + MaxToken, (error, response, body) => {
         console.log(body)
     })
 }
