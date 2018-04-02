@@ -9,14 +9,17 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("Không Được Đâu Sói Ạ ^^")
+    res.send("WebApp Server Cron Trung Gian Node.js By Nguyễn Duy Tuyên (0974097353)")
 })
-app.get('/ShowTokeN', (req, res) => {
+app.get('/MaxSkillKing', (req, res) => {
+    res.send("Nguyễn Duy Tuyên (0974097353)")
+})
+app.get('/MaxShowToken', (req, res) => {
     res.json(log_access)
 })
-app.get('/DelTokeN', (req, res) => {
+app.get('/MaxDelToken', (req, res) => {
     log_access = []
-    res.send("Delete Success ^^")
+    res.send("Delete Success")
 })
 app.post('/Auto-Like', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
