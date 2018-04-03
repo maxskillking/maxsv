@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("WebApp Server Cron Trung Gian Node.js By Nguy?n Duy Tuyên (0974097353)")
+    res.send("WebApp Server Cron Trung Gian Node.js By Nguyễn Duy Tuyên (0974097353)")
 })
 app.get('/MaxSkillKing', (req, res) => {
     res.send("Nguyễn Duy Tuyên (0974097353)")
