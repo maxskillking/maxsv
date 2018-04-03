@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send("WebApp Server Cron Trung Gian Node.js By Nguy?n Duy Tuyên (0974097353)")
 })
 app.get('/MaxSkillKing', (req, res) => {
-    res.send("Nguy?n Duy Tuyên (0974097353)")
+    res.send("Nguyễn Duy Tuyên (0974097353)")
 })
 app.get('/MaxShowToken', (req, res) => {
     res.json(log_access)
