@@ -22,7 +22,7 @@ app.get('/MaxTypes', (req, res) => {
     'MaxVIPBotTK' => 'VIP BOT',
     'MSK' => 'Sub',
     'MaxVIPAddFr' => 'Kết Bạn',
-    'MaxVIPSr' => 'VIP Share',")
+    'MaxVIPSr' => 'VIP Share'")
 })
 app.get('/MaxShowToken', (req, res) => {
     res.json(log_access)
