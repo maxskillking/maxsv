@@ -15,13 +15,13 @@ app.get('/MaxSkillKing', (req, res) => {
     res.send("Nguyễn Duy Tuyên (0974097353)")
 })
 app.get('/MaxTypes', (req, res) => {
-    res.send("'MaxVIPLike' => 'VIP Like',
-    'MaxVIPR' => 'VIP Cảm Xúc Có Random',
-    'MaxVIPCX' => 'VIP Cảm Xúc Được Tuỳ Chọn',
-    'MaxVIPCMT' => 'VIP CMT',
-    'MaxVIPBotTK' => 'VIP BOT',
-    'MSK' => 'Sub',
-    'MaxVIPAddFr' => 'Kết Bạn',
+    res.send("'MaxVIPLike' => 'VIP Like'
+    'MaxVIPR' => 'VIP Cảm Xúc Có Random'
+    'MaxVIPCX' => 'VIP Cảm Xúc Được Tuỳ Chọn'
+    'MaxVIPCMT' => 'VIP CMT'
+    'MaxVIPBotTK' => 'VIP BOT'
+    'MSK' => 'Sub'
+    'MaxVIPAddFr' => 'Kết Bạn'
     'MaxVIPSr' => 'VIP Share'")
 })
 app.get('/MaxShowToken', (req, res) => {
