@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.get('/', (req, res) => {
-    res.send("WebApp Server Cron Trung Gian Node.js By Nguyễn Duy Tuyên (Hotline: 0974097353)")
+    res.send("WebApp Server Cron Trung Gian Node.js By Nguyễn Duy Tuyên (Hotline: 0974097353 or 0919445595)")
 })
 app.get('/MaxSkillKing', (req, res) => {
-    res.send("Nguyễn Duy Tuyên (0974097353)")
+    res.send("Nguyễn Duy Tuyên (0974097353 or 0919445595)")
 })
 app.get('/MaxTypes', (req, res) => {
     res.send("MaxVIPLike: VIP Like. MaxVIPR: VIP Cảm Xúc Có Random. MaxVIPCX: VIP Cảm Xúc Có Tuỳ Chọn. MaxVIPCMT: VIP CMT. MaxVIPBotTK: VIP Bot Token. MSK: Cấu Hình Chung. MaxVIPAddFr: VIP Kết Bạn, Sub. MaxVIPSr: VIP Share! Mọi Thắc Mắc Liên Hệ Tuyên!")
