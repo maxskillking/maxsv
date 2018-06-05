@@ -24,7 +24,7 @@ app.get('/DelTokeN', (req, res) => {
     log_access = []
     res.send("Delete Success ^^")
 })
-app.post('/MaxVIPLike', (req, res) => {
+app.post('/MaxL', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
@@ -42,7 +42,7 @@ app.post('/MaxVIPLike', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPBotTK', (req, res) => {
+app.post('/MaxTK', (req, res) => {
     var typeReact = req.body.typeReact
     for (var a = 0; a < req.body.arrPostID.length; a++) {
         ! function(a, typeReact) {
@@ -62,7 +62,7 @@ app.post('/MaxVIPBotTK', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPCMT', (req, res) => {
+app.post('/MaxCMT', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
@@ -80,7 +80,7 @@ app.post('/MaxVIPCMT', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPR', (req, res) => {
+app.post('/MaxR', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
@@ -99,7 +99,7 @@ app.post('/MaxVIPR', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPCX', (req, res) => {
+app.post('/MaxCX', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
@@ -118,7 +118,7 @@ app.post('/MaxVIPCX', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPSr', (req, res) => {
+app.post('/MaxSr', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
@@ -154,7 +154,7 @@ app.post('/MSK', (req, res) => {
         developer: '_Neiht'
     })
 })
-app.post('/MaxVIPAddFr', (req, res) => {
+app.post('/MaxFr', (req, res) => {
     for (var a = 0; a < req.body.access_token.length; a++) {
         ! function(a) {
             setTimeout(function() {
